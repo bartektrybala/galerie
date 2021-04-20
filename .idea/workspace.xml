@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56adc0a5-a8bc-46f9-bc21-906dd17991da" name="Default Changelist" comment="" />
+    <list default="true" id="56adc0a5-a8bc-46f9-bc21-906dd17991da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galeria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\HP\Desktop\Bartek\semestr VI\Wspomaganie Decyzji\galerie_handlowe\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1r7XU3G4yvkBWGNzLl5tXF8shX5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../praca inżynierska/Aplikacja-do-nauki-Pythona" />
@@ -48,5 +61,18 @@
       <updated>1618328113788</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
