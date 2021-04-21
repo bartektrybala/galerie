@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56adc0a5-a8bc-46f9-bc21-906dd17991da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wspomaganie_decyzji/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galeria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" afterDir="false" />
     </list>
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
