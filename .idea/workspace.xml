@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56adc0a5-a8bc-46f9-bc21-906dd17991da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wspomaganie_decyzji/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wspomaganie_decyzji/ahp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/distance.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galeria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galerie.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/galerie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" afterDir="false" />
     </list>
@@ -18,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -39,6 +43,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../praca inżynierska/Aplikacja-do-nauki-Pythona" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\Bartek\semestr VI\Wspomaganie Decyzji\galerie_handlowe\wspomaganie_decyzji\examples" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -50,6 +59,34 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ahp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="galerie_handlowe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wspomaganie_decyzji" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wspomaganie_decyzji/ahp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ahp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />

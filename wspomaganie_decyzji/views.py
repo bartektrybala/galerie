@@ -4,12 +4,12 @@ from django.urls import reverse
 from .models import Galeria
 import requests
 
-from .forms import AddressForm
+from .forms import AddressForm, ChoiceForm
 
 YOUR_API_KEY = 'AIzaSyC4w8YmL6ETYnjZ6XYNyoVovktUhDZRRmI'
 
 
-def index(request):
+def distance(request):
     distance = ''
     if request.method != 'POST':
         form = AddressForm()
@@ -21,8 +21,40 @@ def index(request):
 
         distance = distanceMatrix(address, galeria.lokalizacja)
         context = {'form': form, 'distance': distance}
-        return render(request, 'wspomaganie_decyzji/index.html', context)
+        return render(request, 'wspomaganie_decyzji/distance.html', context)
     context = {'form': form, 'distance': distance}
+    return render(request, 'wspomaganie_decyzji/distance.html', context)
+
+
+def trala(dict):
+    A = []
+    for i in dict:
+        if i != 'csrfmiddlewaretoken':
+            print(dict[i])
+    return A
+
+
+def index(request):
+    if request.method != 'POST':
+        choices = ChoiceForm()
+    else:
+        choices = ChoiceForm(data=request.POST)
+        dict = request.POST.items
+        print(dict)
+        #dict = trala(request.POST)
+        #print(dict)
+        return HttpResponseRedirect(reverse(('wspomaganie_decyzji:index')))
+
+    pola2 = Galeria._meta.get_fields()
+    pola = pola2[2:8]
+    A = []
+    B = []
+    for k, x in enumerate(pola):
+        for y in pola[k:]:
+            if x != y:
+                A.append(x.name)
+                B.append(y.name)
+    context = {'A': A, 'B': B, 'choices': choices}
     return render(request, 'wspomaganie_decyzji/index.html', context)
 
 
@@ -36,7 +68,7 @@ def galerie(request):
 def galeria(request, galeria_id):
     galeria = Galeria.objects.get(id=galeria_id)
 
-    origins = 'Lutynia, 55-330'
+    origins = 'Tadeusza Kościuszki 13, Wrocław'
     destinations = galeria.lokalizacja
 
     distance = distanceMatrix(origins, destinations)

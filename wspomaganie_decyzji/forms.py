@@ -13,6 +13,17 @@ GALERIE = (
     ('8', 'Arkady Wrocławskie'),
 )
 
+OCENY = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+    ('6', '6'),
+    ('7', '7'),
+    ('8', '8'),
+    ('9', '9'),
+)
 
 class AddressForm(forms.Form):
     address = forms.CharField(required=False, widget=forms.TextInput(
@@ -35,3 +46,68 @@ class AddressForm(forms.Form):
         attrs={'class': 'form-control',
                'id': 'inputGaleria'}
     ))
+
+
+class ChoiceForm(forms.Form):
+    field1 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field2 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field3 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field4 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field5 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field6 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field7 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field8 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field9 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field10 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field11 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'integer',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field12 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field13 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field14 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+    field15 = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+        attrs={'type': 'text',
+               'class': 'form-control btn-lg mb-2'}
+    ))
+
+

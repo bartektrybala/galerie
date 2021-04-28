@@ -40,17 +40,38 @@
   </div>
   <!-- Background image -->
 </header>
-
-<div>
-    From:
-    {{ origin }}
-</div>
-<div>
-    Destination:
-    {{ galeria.lokalizacja }}
-</div>
-<div>
-    {{ distance }}
+<div class="d-flex justify-content-center align-items-center h-100">
+    <div class="card text-center float-left" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text">
+            <div>
+                From:
+                {{ origin }}
+            </div>
+            <div>
+                Destination:
+                {{ galeria.lokalizacja }}
+            </div>
+            <div class="font-italic">
+                Dystans:
+                {{ distance }}
+            </div>
+        </p>
+      </div>
+    </div>
+        <div class="card text-center float-left mr-2" style="width: 18rem;">
+          <div class="card-body">
+            <p class="card-text">
+                Informacje o galerii:<br>
+                1. Wielkość obiektu: {{ galeria.wielkosc_obiektu }} <br>
+                2. Wiek obiektu: {{ galeria.wiek_obiektu }} <br>
+                3. Wygląd obiektu: {{ galeria.wyglad_obiektu }} <br>
+                4. Artykuły spożywcze: {{ galeria.artykuly_spozywcze }} <br>
+                5. Rozrywka: {{ galeria.rozrywka }} <br>
+                6. Usługi: {{ galeria.uslugi }} <br>
+                </p>
+          </div>
+        </div>
 </div>
 </body>
 </html>

@@ -21,6 +21,11 @@
 
 </head>
 <body>
+<div class="float-left">
+    <a href="{% url 'wspomaganie_decyzji:index' %}">
+        <button type="button" class="btn btn-outline-info">Odległość</button>
+    </a>
+</div>
 <div class="container">
     {% for galeria in galerie %}
         <div class="card float-left" style="width: 12rem; height: 28rem;">
@@ -28,10 +33,10 @@
           <div class="card-body">
             <h5 class="card-title">{{ galeria }}</h5>
             <p class="card-text">{{ galeria.lokalizacja }}.</p>
-            <a href="{% url 'wspomaganie_decyzji:galeria' galeria.id %}" class="btn btn-primary">Go somewhere</a>
-          </div>
+              <a href="{% url 'wspomaganie_decyzji:galeria' galeria.id %}" class="btn btn-primary mx-auto">Informacje</a></div>
         </div>
     {% endfor %}
 </div>
+<div class="float-left"></div>
 </body>
 </html>

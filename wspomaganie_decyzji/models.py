@@ -1,11 +1,11 @@
 from django.db import models
 
-WIEK_OBIEKTU = (
-    ('1', 'Bardzo Stary'),
-    ('2', 'Stary+'),
-    ('3', 'Średni'),
-    ('4', 'Nowy'),
-    ('5', 'Dopiero zbudowany (>rok)'),
+ROZRYWKA = (
+    ('1', 'Bardzo niski poziom'),
+    ('2', 'Niski poziom'),
+    ('3', 'Średni poziom'),
+    ('4', 'Wysoki poziom'),
+    ('5', 'Bardzo wysoki poziom'),
 )
 
 WIELKOSC_OBIEKTU = (
@@ -39,17 +39,10 @@ STREFA_WIZUALNA = (
 class Galeria(models.Model):
     name = models.CharField(max_length=150)
     wielkosc_obiektu = models.CharField(choices=WIELKOSC_OBIEKTU, max_length=50)
-    wiek_obiektu = models.CharField(choices=WIEK_OBIEKTU, max_length=50)
-    obecnosc_hipermarketu = models.BooleanField()
-    kino = models.BooleanField()
-    kregielnia = models.BooleanField()
-    strefa_dla_dzieci = models.BooleanField()
-    przestrzen_gastronomiczna = models.CharField(choices=STREFA_GASTRONOMICZNA, max_length=50)
-    strefa_wizualna = models.CharField(choices=STREFA_WIZUALNA, max_length=50)
-    fryzjer = models.BooleanField()
-    bankomat = models.BooleanField()
-    bank = models.BooleanField()
-    operator_komorkowy = models.BooleanField()
+    wyglad_obiektu = models.CharField(choices=STREFA_WIZUALNA, max_length=50)
+    artykuly_spozywcze = models.CharField(choices=STREFA_GASTRONOMICZNA, max_length=50)
+    rozrywka = models.CharField(choices=ROZRYWKA, max_length=50)
+    uslugi = models.CharField(choices=ROZRYWKA, max_length=50)
     lokalizacja = models.TextField()
     image = models.ImageField(default='building.png', upload_to='wspomaganie_decyzji/', null=True, blank=True)
 
