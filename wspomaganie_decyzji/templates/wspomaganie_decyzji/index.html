@@ -16,7 +16,7 @@
     {% csrf_token %}
     <div class="d-flex justify-content-center">
         <div  class="float-left mr-2">
-        {% for choice in choices %}
+        {% for choice in choices1 %}
             {{ choice }}
         {% endfor %}
         </div>
@@ -33,7 +33,7 @@
             {% endfor %}
         </div>
         <div  class="float-left ml-2">
-        {% for choice in choices %}
+        {% for choice in choices2 %}
             {{ choice }}
         {% endfor %}
         </div>

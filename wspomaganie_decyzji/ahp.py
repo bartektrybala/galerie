@@ -9,16 +9,13 @@ choice_comparisons = {('wielkosc_obiektu', 'wyglad_obiektu'): 4, ('wielkosc_obie
                       ('rozrywka', 'uslugi'): 7, ('rozrywka', 'lokalizacja'): 1/3,
                       ('uslugi', 'lokalizacja'): 1/7}
 
-for count, i in enumerate(choice_comparisons):
-    print(i, choice_comparisons[i], count)
 
-
-def ahp_method(choices):
+def ahp_method(dict1, dict2):
     for count, i in enumerate(choice_comparisons):
-        if choices[count][0] > choices[count][1]:
-            choice_comparisons[i] = choices[count][0]
+        if dict1[count] > dict2[count]:
+            choice_comparisons[i] = int(dict1[count])
         else:
-            choice_comparisons[i] = 1/choices[count][0]
+            choice_comparisons[i] = 1/int(dict2[count])
 
     ch = ahpy.Compare(name='Choices', comparisons=choice_comparisons, precision=3, random_index='saaty')
     return ch.target_weights

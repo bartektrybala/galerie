@@ -4,7 +4,8 @@ from django.urls import reverse
 from .models import Galeria
 import requests
 
-from .forms import AddressForm, ChoiceForm
+from .forms import AddressForm, ChoiceForm1, ChoiceForm2
+from .ahp import ahp_method
 
 YOUR_API_KEY = 'AIzaSyC4w8YmL6ETYnjZ6XYNyoVovktUhDZRRmI'
 
@@ -26,23 +27,19 @@ def distance(request):
     return render(request, 'wspomaganie_decyzji/distance.html', context)
 
 
-def trala(dict):
-    A = []
-    for i in dict:
-        if i != 'csrfmiddlewaretoken':
-            print(dict[i])
-    return A
-
 
 def index(request):
     if request.method != 'POST':
-        choices = ChoiceForm()
+        choices1 = ChoiceForm1()
+        choices2 = ChoiceForm2()
     else:
-        choices = ChoiceForm(data=request.POST)
-        dict = request.POST.items
-        print(dict)
-        #dict = trala(request.POST)
-        #print(dict)
+        choices1 = ChoiceForm1(data=request.POST)
+        choices2 = ChoiceForm2(data=request.POST)
+        dict1 = list(dict(list(request.POST.items())[1:len(request.POST)//2+1]).values())
+        dict2 = list(dict(list(request.POST.items())[len(request.POST)//2+1:]).values())
+
+        weights = ahp_method(dict1, dict2)
+        print(weights)
         return HttpResponseRedirect(reverse(('wspomaganie_decyzji:index')))
 
     pola2 = Galeria._meta.get_fields()
@@ -54,7 +51,7 @@ def index(request):
             if x != y:
                 A.append(x.name)
                 B.append(y.name)
-    context = {'A': A, 'B': B, 'choices': choices}
+    context = {'A': A, 'B': B, 'choices1': choices1, 'choices2': choices2}
     return render(request, 'wspomaganie_decyzji/index.html', context)
 
 
