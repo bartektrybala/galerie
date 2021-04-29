@@ -16,6 +16,7 @@
 <button type="button" class="btn btn-outline-info">Galerie</button>
 </a>
 
+
 <form action="{% url 'wspomaganie_decyzji:distance' %}" method="post">
     {% csrf_token %}
   <div class="form-group w-25 mx-auto">
@@ -32,16 +33,11 @@
       <label for="inputZip">Zip</label>
         {{ form.zip_code }}
     </div>
-      <div class="form-group col-md-9">
-      <label for="inputGaleria">Galeria</label>
-          {{ form.galeria }}
+
+      <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Zapisz adres</button>
       </div>
-      <button type="submit" class="btn btn-primary">Oblicz odległość</button>
-      <div class="card ml-5 wd-25">
-          <div class="card-body">
-            Dystans: {{ distance }}
-          </div>
-       </div>
+
   </div>
     <div class="w-25 mx-auto">
            * - wymagane

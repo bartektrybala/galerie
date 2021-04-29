@@ -19,3 +19,28 @@ def ahp_method(dict1, dict2):
 
     ch = ahpy.Compare(name='Choices', comparisons=choice_comparisons, precision=3, random_index='saaty')
     return ch.target_weights
+
+
+def zbior(C, weights):
+    CC = []     # porównanie wariantów
+    WW = []      # suma ważności kryteriów, których numery trafiły do CC
+    for c1 in C:
+        for c2 in C:
+            if c1 != c2:
+                X = {}
+                w_sum = 0           # suma ważności dla każdego porównania
+                for i, cc1 in enumerate(C[c1]):
+                    if C[c1][cc1] < C[c2][cc1] and cc1 != 'odleglosc':
+                        continue
+                    elif C[c1][cc1] >= C[c2][cc1] and cc1 != 'odleglosc':
+                        X[cc1] = C[c1][cc1]
+                        w_sum += weights[cc1]
+                    elif C[c1][cc1] > C[c2][cc1] and cc1 == 'odleglosc':
+                        continue
+                    elif C[c1][cc1] <= C[c2][cc1] and cc1 == 'odleglosc':
+                        X[cc1] = C[c1][cc1]
+                        w_sum += weights['lokalizacja']
+                w_sum = round(w_sum, 2)
+                CC.append(X)
+                WW.append(w_sum)
+    return CC, WW

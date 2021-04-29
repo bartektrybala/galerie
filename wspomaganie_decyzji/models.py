@@ -18,21 +18,21 @@ WIELKOSC_OBIEKTU = (
 )
 
 STREFA_GASTRONOMICZNA = (
-    ('1', 'Dobrze'),
-    ('2', 'Dobrze+'),
-    ('3', 'Dobrze++'),
-    ('4', 'Źle'),
-    ('5', 'Źle-'),
-    ('6', 'Źle--'),
+    ('1', 'Źle--'),
+    ('2', 'Źle-'),
+    ('3', 'Źle'),
+    ('4', 'Dobrze'),
+    ('5', 'Dobrze+'),
+    ('6', 'Dobrze++'),
 )
 
 STREFA_WIZUALNA = (
-    ('1', 'Dobrze'),
-    ('2', 'Dobrze+'),
-    ('3', 'Dobrze++'),
-    ('4', 'Źle'),
-    ('5', 'Źle-'),
-    ('6', 'Źle--'),
+    ('1', 'Źle--'),
+    ('2', 'Źle-'),
+    ('3', 'Źle'),
+    ('4', 'Dobrze'),
+    ('5', 'Dobrze+'),
+    ('6', 'Dobrze++'),
 )
 
 

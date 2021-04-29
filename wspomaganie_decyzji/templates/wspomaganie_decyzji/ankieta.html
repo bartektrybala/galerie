@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<form action="{% url 'wspomaganie_decyzji:index' %}" method="post">
+<form action="{% url 'wspomaganie_decyzji:ankieta' %}" method="post">
     {% csrf_token %}
     <div class="d-flex justify-content-center">
         <div  class="float-left mr-2">
@@ -22,13 +22,13 @@
         </div>
         <div class="float-left mr-2 ">
             {% for a in A %}
-            <button type="button" class="btn btn-primary btn-lg active mb-2" style="height: 44px;">{{ a }}</button>
+            <button type="button" class="btn btn-primary  active mb-2" style="height: 38px;">{{ a }}</button>
                 <br>
             {% endfor %}
         </div>
         <div class="float-left ml-2">
             {% for b in B %}
-            <button type="button" class="btn btn-secondary btn-lg active mb-2" style="height: 44px;">{{ b }}</button>
+            <button type="button" class="btn btn-secondary  active mb-2" style="height: 38px;">{{ b }}</button>
                 <br>
             {% endfor %}
         </div>

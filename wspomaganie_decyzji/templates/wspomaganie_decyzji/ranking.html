@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 {% load bootstrap4 %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <!-- My css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,17 +30,41 @@
         <button type="button" class="btn btn-outline-info">Start</button>
     </a>
 </div>
-<div class="container">
-    {% for galeria in galerie %}
-        <div class="card float-left" style="width: 12rem; height: 28rem;">
-          <img class="card-img-top" src="{{ galeria.image.url }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{ galeria }}</h5>
-            <p class="card-text">{{ galeria.lokalizacja }}.</p>
-              <a href="{% url 'wspomaganie_decyzji:galeria' galeria.id %}" class="btn btn-primary mx-auto">Informacje</a></div>
-        </div>
-    {% endfor %}
+<div class="w-75 mx-auto">
+<div class="wrapper">
+  <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Galeria</th>
+          <th>Wielkość Obiektu</th>
+          <th>Wygląd obiektu</th>
+          <th>Artykuły spożywcze</th>
+          <th>Rozrywka</th>
+          <th>Usługi</th>
+          <th>Dystans od domu</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for galeria in galerie_ranking %}
+          <tr>
+          <td class="rank">{{ forloop.counter }}.</td>
+          <td class="team">
+            <img title="profile image" src="{{ galeria.image.url }}" class="avatar img-circle img-thumbnail" alt="avatar" height="25" width="25">
+             {{ galeria.name }}</td>
+          <td class="points">{{ galeria.wielkosc_obiektu }}</td>
+          <td class="points">{{ galeria.wyglad_obiektu }}</td>
+          <td class="points">{{ galeria.artykuly_spozywcze }}</td>
+          <td class="points">{{ galeria.rozrywka }}</td>
+          <td class="points">{{ galeria.uslugi }}</td>
+          <td class="points">{{ galeria.dystans }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+  </table>
 </div>
+</div>
+
 <div class="float-left"></div>
 </body>
 </html>
