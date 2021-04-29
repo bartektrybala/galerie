@@ -93,12 +93,7 @@ def galerie(request):
 def galeria(request, galeria_id):
     galeria = Galeria.objects.get(id=galeria_id)
 
-    origins = 'Tadeusza Kościuszki 13, Wrocław'
-    destinations = galeria.lokalizacja
-
-    distance = distanceMatrix(origins, destinations)
-
-    context = {'galeria': galeria, 'distance': distance, 'origin': origins}
+    context = {'galeria': galeria}
     return render(request, 'wspomaganie_decyzji/galeria.html', context)
 
 
