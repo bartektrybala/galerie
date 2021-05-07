@@ -48,9 +48,3 @@ class Galeria(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Address(models.Model):
-    address = models.CharField(max_length=200)
-    city = models.CharField(max_length=200)
-    zip_code = models.CharField(max_length=6)

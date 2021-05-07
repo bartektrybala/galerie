@@ -1,7 +1,5 @@
 from django import forms
 
-from .models import Address
-
 GALERIE = (
     ('1', 'Magnolia Park'),
     ('2', 'Wroclavia'),

@@ -9,7 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </head>
 <body>
 <form action="{% url 'wspomaganie_decyzji:ankieta' %}" method="post">
@@ -22,13 +21,13 @@
         </div>
         <div class="float-left mr-2 ">
             {% for a in A %}
-            <button type="button" class="btn btn-primary  active mb-2" style="height: 38px;">{{ a }}</button>
+            <div class="btn btn-primary  active mb-2" style="height: 38px;">{{ a }}</div>
                 <br>
             {% endfor %}
         </div>
         <div class="float-left ml-2">
             {% for b in B %}
-            <button type="button" class="btn btn-secondary  active mb-2" style="height: 38px;">{{ b }}</button>
+            <div class="btn btn-secondary  active mb-2" style="height: 38px;">{{ b }}</div>
                 <br>
             {% endfor %}
         </div>
@@ -43,7 +42,7 @@
         <button type="submit" class="btn btn-lg btn-primary disabled mr-2">Zatwierdz wybory</button>
             <a href="{% url 'wspomaganie_decyzji:galerie' %}">
         <button type="button" class="btn btn-lg btn-outline-info ml-2">Galerie</button>
-    </a>
+            </a>
     </div>
 </form>
 <div class="d-flex justify-content-center mt-4">

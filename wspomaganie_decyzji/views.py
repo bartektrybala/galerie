@@ -7,8 +7,6 @@ import requests
 from .forms import AddressForm, ChoiceForm1, ChoiceForm2
 from .ahp import ahp_method, zbior
 
-YOUR_API_KEY = 'AIzaSyC4w8YmL6ETYnjZ6XYNyoVovktUhDZRRmI'
-
 
 def distance(request):
     if request.method != 'POST':
@@ -18,7 +16,6 @@ def distance(request):
         global address
         address = request.POST['address'] + ', ' + request.POST['zip_code'] + ' ' + request.POST['city']
 
-        context = {'form': form}
         return HttpResponseRedirect(reverse('wspomaganie_decyzji:ankieta'))
     context = {'form': form}
     return render(request, 'wspomaganie_decyzji/distance.html', context)
