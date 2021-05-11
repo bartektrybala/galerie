@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56adc0a5-a8bc-46f9-bc21-906dd17991da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wspomaganie_decyzji/migrations/0008_auto_20210504_1642.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/ankieta.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/ankieta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/ranking.html" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/templates/wspomaganie_decyzji/ranking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wspomaganie_decyzji/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
