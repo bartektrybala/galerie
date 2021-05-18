@@ -7,7 +7,6 @@ import requests
 from .forms import AddressForm, ChoiceForm1, ChoiceForm2
 from .ahp import ahp_method, zbior
 
-YOUR_API_KEY = 'AIzaSyB5ArXsJnuhrNyCGLNHpsT94Bmm-HJk99E'
 
 
 def distance(request):
