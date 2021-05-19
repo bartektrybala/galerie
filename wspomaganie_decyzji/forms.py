@@ -44,128 +44,158 @@ class AddressForm(forms.Form):
 
 
 class ChoiceForm1(forms.Form):
-    field1a = forms.MultipleChoiceField(choices=OCENY, widget=forms.Select(
+    field1a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field2a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
-    fielda3a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+    field3a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
-    fielda4a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
+    field4a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field5a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field6a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field7a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field8a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field9a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field10a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field11a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'integer',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field12a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field13a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field14a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field15a = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
 
 
 class ChoiceForm2(forms.Form):
-    field1b = forms.MultipleChoiceField(choices=OCENY, widget=forms.Select(
+    field1b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field2b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field3b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field4b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field5b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field6b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field7b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field8b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field9b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field10b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field11b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'integer',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field12b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field13b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field14b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
     field15b = forms.ChoiceField(choices=OCENY, widget=forms.Select(
         attrs={'type': 'text',
-               'class': 'form-control  mb-2'}
+               'class': 'form-control mb-2',
+               'onchange': "myFunction(this);"}
     ))
 
 

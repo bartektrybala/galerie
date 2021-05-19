@@ -6,7 +6,7 @@ import requests
 
 from .forms import AddressForm, ChoiceForm1, ChoiceForm2
 from .ahp import ahp_method, zbior
-
+from .pass1 import YOUR_API_KEY
 
 
 def distance(request):
@@ -61,6 +61,7 @@ def ranking(request):
     C6 = sum(WW[35:41])
     C7 = sum(WW[42:48])
     C8 = sum(WW[49:55])
+
     D = {'1': C1, '2': C2, '3': C3, '4': C4, '5': C5, '6': C6, '7': C7, '8': C8}
     D = dict(sorted(D.items(), key=lambda item: item[1], reverse=True))
 

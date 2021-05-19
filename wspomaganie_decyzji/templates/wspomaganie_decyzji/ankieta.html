@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load bootstrap4 %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <-- conf -->
+    <script type='text/javascript' src="{% static 'js/config.js' %}"></script>
+
 </head>
 <body>
 <form action="{% url 'wspomaganie_decyzji:ankieta' %}" method="post">
@@ -21,13 +26,13 @@
         </div>
         <div class="float-left mr-2 ">
             {% for a in A %}
-            <div class="btn btn-primary  active mb-2" style="height: 38px;">{{ a }}</div>
+            <div class="btn btn-primary active mb-2" style="height: 38px; width: 180px;">{{ a }}</div>
                 <br>
             {% endfor %}
         </div>
         <div class="float-left ml-2">
             {% for b in B %}
-            <div class="btn btn-secondary  active mb-2" style="height: 38px;">{{ b }}</div>
+            <div class="btn btn-secondary active mb-2" style="height: 38px; width: 180px;">{{ b }}</div>
                 <br>
             {% endfor %}
         </div>
@@ -52,5 +57,8 @@
     <div class="btn btn-primary ml-2">7</div> - bardzo silnia przewaga
     <div class="btn btn-success ml-2">9</div> - absolutna przewaga
 </div>
+
+<!-- JS -->
+    <script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>
