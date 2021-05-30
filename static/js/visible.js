@@ -18,5 +18,3 @@ function myFunction(elem) {
         document.getElementById(res).classList.remove('invisible');
     }
 }
-
-var mykey = config.MY_KEY;
