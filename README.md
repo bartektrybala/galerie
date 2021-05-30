@@ -5,7 +5,7 @@ Galerie na których się skupiamy:
 ![](jpg/galerie.png)
 
 Każda galeria ma ocenę kryteriów przez eksperta:
-![](jpg/strona_galerii.png)
+![](jpg/galerii_strona.png)
 
 Od uzytkownika pobierany jest adres:
 
