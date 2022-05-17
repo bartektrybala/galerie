@@ -18,14 +18,13 @@
 
 </head>
 <body>
-<div class="float-left">
+<div>
     <a href="{% url 'wspomaganie_decyzji:distance' %}">
         <button type="button" class="btn btn-outline-info">Start</button>
     </a>
 </div>
 <div class="w-75 mx-auto">
-<div class="wrapper">
-  <table>
+  <table class="table">
       <thead>
         <tr>
           <th>Rank</th>
@@ -55,7 +54,6 @@
       {% endfor %}
       </tbody>
   </table>
-</div>
 </div>
 
 <div class="float-left"></div>

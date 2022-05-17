@@ -8,14 +8,14 @@ from .forms import AddressForm, ChoiceForm1, ChoiceForm2
 from .ahp import ahp_method, zbior
 from .pass1 import YOUR_API_KEY
 
+from rich import print
 
 def distance(request):
     if request.method != 'POST':
         form = AddressForm()
     else:
         form = AddressForm(data=request.POST)
-        global address
-        address = request.POST['address'] + ', ' + request.POST['zip_code'] + ' ' + request.POST['city']
+        request.session['address'] = request.POST['address'] + ', ' + request.POST['zip_code'] + ' ' + request.POST['city']
 
         return HttpResponseRedirect(reverse('wspomaganie_decyzji:ankieta'))
     context = {'form': form}
@@ -33,9 +33,8 @@ def ankieta(request):
         dict2 = list(dict(list(request.POST.items())[len(request.POST)//2+1:]).values())
 
         weights = ahp_method(dict1, dict2)
-        global C, CC, WW
-        C = C_create()
-        CC, WW = zbior(C, weights)
+        request.session['C'] = C_create(request)
+        request.session['CC'], request.session['WW'] = zbior(request.session['C'], weights)
         return HttpResponseRedirect(reverse('wspomaganie_decyzji:ranking'))
 
     pola2 = Galeria._meta.get_fields()
@@ -53,6 +52,7 @@ def ankieta(request):
 
 
 def ranking(request):
+    WW = request.session['WW']
     C1 = sum(WW[0:6])
     C2 = sum(WW[7:13])
     C3 = sum(WW[14:20])
@@ -103,7 +103,7 @@ def distanceMatrix(origin, destination):
     return dist
 
 
-def C_create():
+def C_create(request):
     galerie = Galeria.objects.all()
     global G        # potrzebne do rankingu
     G = [[], [], [], [], [], [], [], []]
@@ -113,7 +113,7 @@ def C_create():
         G[k].append(galeria.artykuly_spozywcze)
         G[k].append(galeria.rozrywka)
         G[k].append(galeria.uslugi)
-        G[k].append(distanceMatrix(address, galeria.lokalizacja))
+        G[k].append(distanceMatrix(request.session['address'], galeria.lokalizacja))
 
     C = {'C1': {'wielkosc_obiektu': '', 'wyglad_obiektu': '', 'artykuly_spozywcze': '', 'rozrywka': '', 'uslugi': '', 'odleglosc': ''},
          'C2': {'wielkosc_obiektu': '', 'wyglad_obiektu': '', 'artykuly_spozywcze': '', 'rozrywka': '', 'uslugi': '', 'odleglosc': ''},
